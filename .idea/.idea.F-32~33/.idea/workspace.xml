@@ -11,6 +11,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/PlayerHarm.cs" />
+        <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LevelObjectsManager.cs" />
       </list>
     </option>
   </component>
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607685770783</updated>
-      <workItem from="1607685797639" duration="1261000" />
+      <workItem from="1607685797639" duration="1612000" />
     </task>
     <servers />
   </component>
