@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="BT_FILE" t="Include">
+          <e p="REMINDER.txt" t="Include" />
           <e p="Scripts" t="Include">
             <e p="LevelObjectsManager.cs" t="Include" />
             <e p="PlayerHarm.cs" t="Include" />
@@ -34,6 +35,9 @@
               </e>
             </e>
           </e>
+        </e>
+        <e p="Test" t="Include">
+          <e p="Player.cs" t="Include" />
         </e>
         <e p="test.txt" t="Include" />
       </e>
