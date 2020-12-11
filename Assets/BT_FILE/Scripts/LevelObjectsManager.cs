@@ -17,7 +17,7 @@ public class LevelObjectsManager : MonoBehaviour
      
     public delegate void OnPlayerHurt();  
 
-    public OnPlayerHurt ONPlayerHurt; // 여기에 플레이어가 피해를 입었을때 호출되는 함수를 추가해주세요
+    public OnPlayerHurt ONPlayerHurt; // 여기에 플레이어가 피해를 입었을때 호출되는 함수들을 추가해주세요
     
     [InfoBox( "반드시 플레이어 레이어를 넣어주세요",InfoMessageType.Warning)]
     public LayerMask playerLayer;
