@@ -25,4 +25,5 @@ public class LinearSaw : MonoBehaviour
             bladeObject.transform.position =
                 Vector3.Lerp(posA.position, posB.position, (1 - ((t % interval) / interval)) * 2);
     }
+    
 }

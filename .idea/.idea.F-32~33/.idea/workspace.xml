@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/BT_FILE/Scripts/DeadlySwamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/PlayerHarm.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LevelObjectsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LinearSaw.cs" />
+        <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/DeadlySwamp.cs" />
       </list>
     </option>
   </component>
@@ -64,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607685770783</updated>
-      <workItem from="1607685797639" duration="7404000" />
+      <workItem from="1607685797639" duration="9597000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,7 @@
         <e p="BT_FILE" t="Include">
           <e p="REMINDER.txt" t="Include" />
           <e p="Scripts" t="Include">
+            <e p="DeadlySwamp.cs" t="Include" />
             <e p="LevelObjectsManager.cs" t="Include" />
             <e p="LinearSaw.cs" t="Include" />
             <e p="PlayerHarm.cs" t="Include" />
