@@ -17,11 +17,23 @@ public class DeadlySwamp : MonoBehaviour
             StartCoroutine(Cor_SwampFillup());
     }
 
+    public void StartSwamp()
+    {
+        StartCoroutine(Cor_SwampFillup());
+    }
+
+    public void StopSwamp()
+    {
+        StopCoroutine(Cor_SwampFillup());
+    }
+
     IEnumerator Cor_SwampFillup()
     {
         while (true)
         {
-            yield return null;
+            yield return new WaitForFixedUpdate();
+            SwampMiddle.localScale = new Vector2(SwampMiddle.localScale.x, SwampMiddle.localScale.y + swampSpeed);
+            SwampHead.position = new Vector2(SwampHead.position.x,SwampHead.position.y + swampSpeed);
         }
     }
 }
