@@ -12,16 +12,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BT_FILE/Scripts/IntroCutscene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_MaterialManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BT_FILE/Scripts/DeadlySwamp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_FILE/Scripts/SceneControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/PlayerHarm.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LevelObjectsManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LinearSaw.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/DeadlySwamp.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/InvertedMask.cs" />
+        <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/LinearSaw.cs" />
+        <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/SceneControl.cs" />
         <option value="$PROJECT_DIR$/Assets/BT_FILE/Scripts/IntroCutscene.cs" />
       </list>
     </option>
@@ -73,7 +76,7 @@
       <updated>1607685770783</updated>
       <workItem from="1607685797639" duration="11069000" />
       <workItem from="1607704942072" duration="1519000" />
-      <workItem from="1607732429508" duration="1436000" />
+      <workItem from="1607732429508" duration="6420000" />
     </task>
     <servers />
   </component>
