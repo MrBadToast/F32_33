@@ -15,11 +15,19 @@ public class FollowCamera : MonoBehaviour
 
     private float lerpTime = 0;
 
+    private float delayTime = 1;
+
     private Vector3 lastPos;
     private Vector3 TargetPos;
 
     private void Update()
     {
+        if(delayTime > 0)
+        {
+            delayTime -= Time.deltaTime;
+            return;
+        }
+
         maxY = Mathf.Max(maxY, minY);
         minY = Mathf.Min(maxY, minY);
 

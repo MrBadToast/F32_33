@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-  productGUID: 309d8810e7866904eb4f9fecfc814c96
+  productGUID: c7442b1fe2ffbf347b685d69610e0a16
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -587,7 +587,6 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Collab: 1
-    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 

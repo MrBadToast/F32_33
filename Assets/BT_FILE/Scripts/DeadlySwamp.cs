@@ -6,15 +6,28 @@ using UnityEngine;
 public class DeadlySwamp : MonoBehaviour
 {
     public float swampSpeed;
+    public float stanbyTime = 2.0f;
     public bool startOnAwake = true;
 
     public Transform SwampHead;
     public Transform SwampMiddle;
-
+    
+    
     private void Start()
     {
+        Debug.Log(LevelObjectsManager.Instance);
+        LevelObjectsManager.Instance.ONPlayerHurt += StopSwamp;
+        Debug.Log("d1");
+        
         if (startOnAwake)
             StartCoroutine(Cor_SwampFillup());
+        
+    }
+    
+
+    private void OnDisable()
+    {
+        LevelObjectsManager.Instance.ONPlayerHurt -= StopSwamp;
     }
 
     public void StartSwamp()
@@ -24,11 +37,14 @@ public class DeadlySwamp : MonoBehaviour
 
     public void StopSwamp()
     {
-        StopCoroutine(Cor_SwampFillup());
+        StopAllCoroutines();
     }
 
     IEnumerator Cor_SwampFillup()
     {
+        //a
+        yield return new WaitForSeconds(stanbyTime);
+        
         while (true)
         {
             yield return new WaitForFixedUpdate();
@@ -36,4 +52,6 @@ public class DeadlySwamp : MonoBehaviour
             SwampHead.position = new Vector2(SwampHead.position.x,SwampHead.position.y + swampSpeed);
         }
     }
+    
+    
 }

@@ -19,7 +19,11 @@ public class SceneMove : MonoBehaviour
     [SerializeField]
     private GameObject mask;
 
-    void Awake()
+    private Camera camera;
+
+    private float moveDelay;
+
+    private void Awake()
     {
         if (instance == null)
         {
@@ -30,9 +34,29 @@ public class SceneMove : MonoBehaviour
             Destroy(this.gameObject);
     }
 
+    public void Update()
+    {
+        if (moveDelay > 0)
+            moveDelay -= Time.deltaTime;
+        if(camera == null)
+            camera = FindObjectOfType<Camera>();
+        screenRenderer.transform.position = new Vector3(screenRenderer.transform.position.x, camera.transform.position.y - 5.78f, screenRenderer.transform.position.z);
+    }
+
+    public bool SceneCanMove()
+    {
+        return moveDelay <= 0;
+    }
+
     public void SceneChange(SceneName sceneName)
     {
-        StartCoroutine(CaptureScreen(sceneName));
+        SceneChange(sceneName.ToString());
+    }
+
+    public void SceneChange(string sceneName)
+    {
+        if (SceneCanMove())
+            StartCoroutine(CaptureScreen(sceneName));
     }
 
     public void ChangeMaskPos(Vector2 pos)
@@ -40,8 +64,11 @@ public class SceneMove : MonoBehaviour
         mask.transform.position = pos;
     }
 
-    IEnumerator CaptureScreen(SceneName sceneName)
+    IEnumerator CaptureScreen(string sceneName)
     {
+        mask.SetActive(false);
+        moveDelay = 1.5f;
+        screenRenderer.sprite = null;
         Texture2D texture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         yield return new WaitForEndOfFrame();
         texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, false);
@@ -49,6 +76,8 @@ public class SceneMove : MonoBehaviour
         screenRenderer.sprite = Sprite.Create(texture, new Rect(Vector2.zero, new Vector2(texture.width, texture.height)),Vector2.zero);
         mask.SetActive(true);
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(sceneName.ToString());
+        SceneManager.LoadScene(sceneName);
     }
+
+
 }

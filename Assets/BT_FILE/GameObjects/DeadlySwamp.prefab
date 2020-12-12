@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5585021861763201307}
   - component: {fileID: 4894008953776115710}
   - component: {fileID: 285384507661116854}
+  - component: {fileID: 7636325029800518671}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559612713469777184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.97, y: 1.72, z: 0}
+  m_LocalPosition: {x: 4.97, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1207156670346219510}
@@ -50,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,6 +102,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7636325029800518671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559612713469777184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  change_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  renderer: {fileID: 4894008953776115710}
 --- !u!1 &1207156670239933628
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207156670239933629}
   - component: {fileID: 1207156670239933630}
+  - component: {fileID: 2088217227205752718}
   m_Layer: 0
   m_Name: AnchoredPoint
   m_TagString: Untagged
@@ -150,7 +167,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,7 +189,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 051cbd9885da45c4db99cf55a38cd92b, type: 3}
-  m_Color: {r: 0, g: 0.16862746, b: 0.41176474, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -182,6 +199,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2088217227205752718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207156670239933628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 1, g: 1, b: 1, a: 0}
+  change_Color: {r: 0, g: 0.16862746, b: 0.41176474, a: 0}
+  renderer: {fileID: 1207156670239933630}
 --- !u!1 &1207156670346219509
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swampSpeed: 0.01
+  stanbyTime: 2
   startOnAwake: 1
   SwampHead: {fileID: 1207156670346219510}
   SwampMiddle: {fileID: 1207156671832156514}
@@ -317,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207156671802037535}
   - component: {fileID: 1207156671802037528}
+  - component: {fileID: 208476784698394627}
   m_Layer: 0
   m_Name: AnchoredPoint
   m_TagString: Untagged
@@ -356,7 +390,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -378,7 +412,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 051cbd9885da45c4db99cf55a38cd92b, type: 3}
-  m_Color: {r: 0, g: 0.16862746, b: 0.41176474, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -388,6 +422,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &208476784698394627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207156671802037534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 1, g: 1, b: 1, a: 0}
+  change_Color: {r: 0, g: 0.16862746, b: 0.41176474, a: 0}
+  renderer: {fileID: 1207156671802037528}
 --- !u!1 &1207156671832156513
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +479,7 @@ GameObject:
   - component: {fileID: 3125750421549536178}
   - component: {fileID: 3167867393772874667}
   - component: {fileID: 7005591143185642193}
+  - component: {fileID: 1703745034647940586}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: Untagged
@@ -445,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2226794002457352174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.94, y: 1.72, z: 0}
+  m_LocalPosition: {x: -9.94, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1207156670346219510}
@@ -469,7 +519,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -520,6 +570,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1703745034647940586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226794002457352174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  change_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  renderer: {fileID: 3167867393772874667}
 --- !u!1 &6333440805489877269
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +596,7 @@ GameObject:
   - component: {fileID: 588222297781799855}
   - component: {fileID: 4908186702216808658}
   - component: {fileID: 5353338591737047299}
+  - component: {fileID: 6686831114091499133}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: Untagged
@@ -546,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6333440805489877269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.99, y: 1.72, z: 0}
+  m_LocalPosition: {x: -4.99, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1207156670346219510}
@@ -570,7 +636,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -621,6 +687,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6686831114091499133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333440805489877269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  change_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  renderer: {fileID: 4908186702216808658}
 --- !u!1 &6368257991240015368
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +713,7 @@ GameObject:
   - component: {fileID: 5904000769313888710}
   - component: {fileID: 2048388595610115080}
   - component: {fileID: 270528700408872380}
+  - component: {fileID: 3845773328194541895}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: Untagged
@@ -647,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6368257991240015368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.92, y: 1.72, z: 0}
+  m_LocalPosition: {x: 9.92, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1207156670346219510}
@@ -671,7 +753,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -722,6 +804,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3845773328194541895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368257991240015368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  change_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  renderer: {fileID: 2048388595610115080}
 --- !u!1 &6894664413064095858
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +830,7 @@ GameObject:
   - component: {fileID: 4783531282199786582}
   - component: {fileID: 8565278820448958693}
   - component: {fileID: 7657684907214586414}
+  - component: {fileID: 4932548807669082976}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: Untagged
@@ -748,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6894664413064095858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.72, z: 0}
+  m_LocalPosition: {x: 0, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1207156670346219510}
@@ -772,7 +870,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d695af4d7d0955b4ab26538329f83d13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -823,3 +921,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4932548807669082976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6894664413064095858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015a7b8a8bc4fa4eae638e33ab3da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  base_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  change_Color: {r: 0.098039225, g: 0.16470589, b: 0.40784317, a: 0}
+  renderer: {fileID: 8565278820448958693}

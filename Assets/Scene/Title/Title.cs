@@ -8,7 +8,11 @@ public class Title : MonoBehaviour
     [SerializeField]
     private Button startBtn;
     [SerializeField]
+    private SpriteRenderer startSprite;
+    [SerializeField]
     private Button quitBtn;
+    [SerializeField]
+    private SpriteRenderer quitSprite;
 
     private GameObject selectUI;
 
@@ -17,9 +21,17 @@ public class Title : MonoBehaviour
     [SerializeField]
     private Transform quitBtnPos;
 
+    [SerializeField]
+    private SoundModule_Base soundModule;
+
+    private void Start()
+    {
+        soundModule.Play("MainMenu");
+    }
+
     private void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject == null)
+        if (selectUI != null && EventSystem.current.currentSelectedGameObject == null)
         {
             if (selectUI.Equals(startBtn.gameObject))
                 startBtn.Select();
@@ -28,16 +40,29 @@ public class Title : MonoBehaviour
         }
         else
             selectUI = EventSystem.current.currentSelectedGameObject;
+
+        if(selectUI != null)
+        {
+            startSprite.color = Color.white;
+            quitSprite.color = Color.white;
+
+            if (selectUI.Equals(startBtn.gameObject))
+                startSprite.color = Color.red;
+            else if (selectUI.Equals(quitBtn.gameObject))
+                quitSprite.color = Color.red;
+        }
     }
     public void StartGame()
     {
-        SceneMove.instance.ChangeMaskPos(startBtnPos.position);
+        if(SceneMove.instance.SceneCanMove())
+            SceneMove.instance.ChangeMaskPos(startBtnPos.position);
         SceneMove.instance.SceneChange(SceneName.InGame);
     }
 
     public void QuitGame()
     {
-        SceneMove.instance.ChangeMaskPos(quitBtnPos.position);
+        if (SceneMove.instance.SceneCanMove())
+            SceneMove.instance.ChangeMaskPos(quitBtnPos.position);
         SceneMove.instance.SceneChange(SceneName.GameQuit);
     }
 
